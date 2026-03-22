@@ -6,8 +6,6 @@
 
 ### Social Engineering Intelligence Platform
 
-*ಪತ್ತೇದಾರ The Authorised Investigator*
-
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white)](https://postgresql.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
