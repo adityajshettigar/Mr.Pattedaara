@@ -3,14 +3,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="public/logo-white.png">
   <source media="(prefers-color-scheme: light)" srcset="public/logo.png">
-  <img alt="Mr. Pattedaara Logo" src="public/logo.png" width="100">
+  <img alt="Mr. Pattedaara Logo" src="public/logo.png" width="400">
 </picture>
 
 # Mr. Pattedaara | Mr. ಪತ್ತೇದಾರ
 
 ### Social Engineering Intelligence Platform
 
-> "ಪತ್ತೇದಾರ — The Investigator"
+ "ಪತ್ತೇದಾರ - The Investigator"
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white)](https://postgresql.org)
