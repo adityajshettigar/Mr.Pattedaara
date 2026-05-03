@@ -102,6 +102,23 @@ Everything runs in the browser. No complex installations. No cloud subscriptions
 | PDF Generation | jsPDF + jsPDF-AutoTable |
 | Styling | Plain CSS with CSS variables (dark + light themes) |
 | Threat Intel | VirusTotal · Shodan · Have I Been Pwned · WHOIS/RDAP |
+=======
+# Mr. Pattedaara — ಪತ್ತೇದಾರ
+## Social Engineering Intelligence Platform · v3.0
+
+> "ಪತ್ತೇದಾರ — The Authorised Investigator"
+
+---
+
+## What's New in v3
+- PostgreSQL backend — real database, not localStorage
+- JWT authentication — secure login with httpOnly cookies
+- 4-tier roles — Superintendent / IO / Analyst / Viewer
+- Officer management — create, edit, deactivate officers
+- Audit log — every action recorded
+- Logo — detective icon, white in dark / black in light theme
+- Kannada fix — correctly spelled ಪತ್ತೇದಾರ
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 
 ---
 
@@ -109,6 +126,7 @@ Everything runs in the browser. No complex installations. No cloud subscriptions
 
 ### Prerequisites
 - Node.js 18+
+<<<<<<< HEAD
 - PostgreSQL 14+ (or Docker)
 
 ### 1. Clone & Install
@@ -166,22 +184,55 @@ npm run db:seed  # adds demo users and 3 demo cases
 ```bash
 npm run dev
 # → http://localhost:3000
+=======
+- PostgreSQL 14+
+
+### Setup
+
+```bash
+# 1. Install
+npm install
+
+# 2. Configure
+cp .env.example .env.local
+# Edit DATABASE_URL and JWT_SECRET
+
+# 3. Create DB
+psql -U postgres -c "CREATE DATABASE pattedaara;"
+npm run db:init
+
+# 4. Seed demo data
+npm run db:seed
+
+# 5. Run
+npm run dev
+# http://localhost:3000
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 ```
 
 ---
 
+<<<<<<< HEAD
 ## Default Login Credentials
 
 > ⚠️ **Change all passwords immediately after first login in any non-development environment.**
+=======
+## Default Logins (change immediately)
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 
 | Role | Email | Password |
 |---|---|---|
 | Superintendent | admin@pattedaara.local | Admin@1234 |
+<<<<<<< HEAD
 | Investigating Officer | ramesh.k@pattedaara.local | Officer@1234 |
+=======
+| IO | ramesh.k@pattedaara.local | Officer@1234 |
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 | Analyst | deepa.r@pattedaara.local | Analyst@1234 |
 
 ---
 
+<<<<<<< HEAD
 ## API Keys (Optional Phase 2 Features)
 
 Add keys in **Settings → API Integrations**. All keys are stored in your browser's localStorage only they are never sent to any server except the respective third-party API directly.
@@ -260,18 +311,43 @@ All routes require `Authorization: Bearer <token>` header or `pttdr_token` cooki
 | POST | `/api/users` | Superintendent | Create officer |
 | PATCH | `/api/users/:id` | Superintendent | Update role / password |
 | DELETE | `/api/users/:id` | Superintendent | Deactivate officer |
+=======
+## Role Permissions
+
+| Action | Supt | IO | Analyst | Viewer |
+|---|:---:|:---:|:---:|:---:|
+| View all cases | ✅ | own | ✅ | ✅ |
+| Create / Edit case | ✅ | ✅ | status only | ❌ |
+| Delete case | ✅ | ❌ | ❌ | ❌ |
+| Graph / Timeline / Forensics | ✅ | ✅ | add only | ❌ |
+| Manage officers | ✅ | ❌ | ❌ | ❌ |
+
+---
+
+## Generate JWT Secret
+```bash
+openssl rand -hex 64
+```
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 
 ---
 
 ## Deployment
 
+<<<<<<< HEAD
 ### Environment Variables for Production
 ```env
 DATABASE_URL=postgresql://user:pass@host:5432/pattedaara?sslmode=require
+=======
+Set in production environment:
+```env
+DATABASE_URL=postgresql://...?sslmode=require
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 JWT_SECRET=<64-char-random-hex>
 NODE_ENV=production
 ```
 
+<<<<<<< HEAD
 ### Recommended Platforms
 
 | Layer | Free | Paid |
@@ -283,10 +359,14 @@ NODE_ENV=production
 npm run build
 npm start
 ```
+=======
+Recommended: Vercel (app) + Supabase or Neon (database)
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
 
 ---
 
 ## Roadmap
+<<<<<<< HEAD
 
 ```
 v1.0 Phase 1 Manual Core (LocalStorage)    ✅ Complete
@@ -319,3 +399,12 @@ This platform is intended for **authorised investigative and educational use onl
 <div align="center">
  <sub>Built for cyber crime investigators everywhere &nbsp;·&nbsp; Mr. ಪತ್ತೇದಾರ</sub>
 </div>
+=======
+```
+v1  Phase 1 — Manual Core          ✅
+v2  Phase 2 — API Integrations     ✅
+v3  Phase 3 — PostgreSQL + Auth    ✅  current
+v4  Phase 4 — Mobile PWA           planned
+v5  Phase 5 — DL Steganalysis      planned
+```
+>>>>>>> 64376b0 (feat: implement JWT auth pipeline, fix middleware loop, and build dynamic training UI)
