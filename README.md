@@ -23,17 +23,6 @@ A free, open-source investigation dashboard for cyber crime units, law enforceme
 
 </div>
 
----
-
-## 🚀 What's New in v3
-- **PostgreSQL Backend** — Real, scalable database replacing localStorage
-- **JWT Authentication** — Secure login with httpOnly cookies
-- **4-Tier Roles** — Superintendent / Investigating Officer (IO) / Analyst / Viewer
-- **Officer Management** — Create, edit, and deactivate officers dynamically
-- **Audit Log** — Every action is timestamped and recorded
-- **Refined Branding** — Correct Kannada spelling (ಪತ್ತೇದಾರ) and theme-adaptive logo logic
-
----
 
 ## What is Mr. Pattedaara?
 
